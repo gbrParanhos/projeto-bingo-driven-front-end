@@ -25,6 +25,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/bingo-driven-front-end:latest
   CD-DeployToVercel:
+    runs-on: ubuntu-latest
+    steps:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
